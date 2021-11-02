@@ -15,3 +15,6 @@ nodeElm
 └── yarn.lock
 
 Sequelize：我们选择 Node 的 ORM 框架 Sequelize 来操作数据库。这样，我们读写的都是 JavaScript 对象，Sequelize 帮我们把对象变成数据库中的行。
+
+database/index.js 中是普通的连接数据库方法
+Sequelize.js 用的 Sequelize 操作数据库

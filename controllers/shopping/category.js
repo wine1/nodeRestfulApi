@@ -1,12 +1,30 @@
-const { getData } = require('../../database/createSql')
-
-class Category {
-  first = ctx => {
-    ctx.body = 'hahahahah'
-  }
-  db = async ctx => {
-    ctx.body = await getData()
+const { DataTypes } = require('sequelize')
+const db = require('../../database/sequelize')
+const sequelize = db.sequelize
+const model = require('../../models/shopping/category')(sequelize, DataTypes)
+console.log('model', model)
+class CategoryController {
+  /** 获取category */
+  static async getCategoryList(ctx) {
+    // const data = ctx.request.query
+    if (model) {
+      // if (data) {
+      const list = await model.findAll()
+      console.log('list', list)
+      ctx.body = {
+        code: 1,
+        data: {
+          list,
+        },
+        message: '成功',
+      }
+      // } else {
+      //   ctx.body = {
+      //     code: -1,
+      //     message: '参数错误',
+      //   }
+      // }
+    }
   }
 }
-const category = new Category()
-module.exports = category
+module.exports = CategoryController
