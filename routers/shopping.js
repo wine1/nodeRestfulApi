@@ -1,8 +1,10 @@
-const Router = require('koa-router')
-const router = new Router()
-const category = require('../controllers/shopping/category')
+const Router = require("koa-router");
+const router = new Router();
+const category = require("../controllers/shopping/category");
+const food = require("../controllers/shopping/food");
 
-router.get('/getCategoryList', category.getCategoryList)
+router.get("/getCategoryList", category.getCategoryList);
+router.get("/addFood", food.createFood);
 // router.get('/first', category.first)
 // router.get('/db', category.db)
 // router.get('/:id', async ctx => {
@@ -12,4 +14,4 @@ router.get('/getCategoryList', category.getCategoryList)
 //   ctx.body = ctx.request.body
 // })
 
-module.exports = router
+module.exports = router;

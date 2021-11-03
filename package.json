@@ -25,13 +25,9 @@
         "eslint": "^8.1.0",
         "husky": "^7.0.4"
     },
-    "gitHooks": {
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.{js,jsx,vue}": [
-            "prettier --write",
-            "git add"
-        ]
+    "husky": {
+        "hooks": {
+            "pre-commit": "standard \"src/**/*.{js,ts}\" | snazzy"
+        }
     }
 }
