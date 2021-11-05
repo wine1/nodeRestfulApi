@@ -32,3 +32,10 @@ await sequelize.sync({ force: false }); // force:true => delete it if exists
 
 database/index.js 中是普通的连接数据库方法
 Sequelize.js 用的 Sequelize 操作数据库
+
+（1）get 请求：使用 ctx.request.query
+（2）post 请求：使用 ctx.request.body
+
+// 店铺 购物车 模块
+// 登陆注册
+// 管理员注册
