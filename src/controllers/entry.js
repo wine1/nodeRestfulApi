@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const db = require("../database/sequelize");
 const sequelize = db.sequelize;
-const model = require("../models/entry")(sequelize, DataTypes);
-const entryListData = require("../InitData/entry");
+// const model = require("../models/entry")(sequelize, DataTypes);
+// const entryListData = require("../../InitData/entry");
 
 class EntryController {
     static async EntryData(ctx) {

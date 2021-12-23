@@ -1,8 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const { DataTypes } = require("sequelize");
 const db = require("../../database/sequelize");
 const sequelize = db.sequelize;
 const model = require("../../models/shopping/activity")(sequelize, DataTypes);
-
 class ActivityController {
     static async getActivityList(ctx) {
         if (model) {
@@ -18,5 +19,4 @@ class ActivityController {
         }
     }
 }
-
 module.exports = ActivityController;

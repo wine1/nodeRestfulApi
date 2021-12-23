@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
             avatar: {
                 type: DataTypes.STRING,
             },
+            isAdmin: {
+                type: DataTypes.BOOLEAN,
+            },
         },
         {
             tableName: "user",

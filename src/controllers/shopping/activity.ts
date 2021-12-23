@@ -1,10 +1,10 @@
 const { DataTypes } = require("sequelize");
 const db = require("../../database/sequelize");
 const sequelize = db.sequelize;
-const model = require("../../models/shopping/delivery")(sequelize, DataTypes);
+const model = require("../../models/shopping/activity")(sequelize, DataTypes);
 
-class DeliveryController {
-    static async getDeliveryList(ctx) {
+class ActivityController {
+    static async getActivityList(ctx: any) {
         if (model) {
             const list = await model.findAll();
             console.log("list", list);
@@ -19,4 +19,5 @@ class DeliveryController {
     }
 }
 
-module.exports = DeliveryController;
+module.exports = ActivityController;
+export { }

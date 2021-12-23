@@ -1,6 +1,6 @@
 const Router = require("koa-router");
 const router = new Router();
-const { apiPrefix } = require("../config/index");
+const { apiPrefix } = require("../../config/index");
 const shopping = require("./shopping");
 const cart = require("./cart");
 const entry = require("./entry");

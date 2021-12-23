@@ -4,7 +4,7 @@ const category = require("../controllers/shopping/category");
 const food = require("../controllers/shopping/food");
 
 router.get("/getCategoryList", category.getCategoryList);
-router.get("/updateCategoryList", category.updateCategoryList);
+router.get("/addCategoryList", category.addCategoryList);
 router.get("/addFood", food.createFood);
 // router.get('/first', category.first)
 // router.get('/db', category.db)
